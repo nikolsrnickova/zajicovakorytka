@@ -20,6 +20,6 @@ python3 -m http.server 8080
 - `assets/images/` — fotografie
 - `assets/icons/` — maskot zajíce a ikony
 
-## Formulář
+## Kontakt
 
-Poptávka otevírá e-mailový klient (`mailto:info@zajicovakorytka.cz`). Adresu upravte v `script.js` podle skutečného kontaktu.
+Objednávky probíhají telefonicky: **+420 724 621 572**.
