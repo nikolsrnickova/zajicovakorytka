@@ -411,7 +411,6 @@ p {
 /* ——— Intro strip ——— */
 .intro-strip {
   padding: 3.5rem 0;
-  border-bottom: 1px dashed rgba(184, 120, 54, 0.28);
 }
 
 .intro-text {
@@ -432,20 +431,33 @@ p {
   padding: clamp(4rem, 8vw, 6.5rem) 0;
 }
 
-.section--warm {
-  background:
-    linear-gradient(180deg, rgba(239, 232, 220, 0.65), rgba(248, 244, 238, 0.3));
+/* Alternating section backgrounds */
+.section-bg--soft {
+  background: var(--white);
 }
 
-.section--olive {
+.section-bg--warm {
+  background: var(--cream-deep);
+}
+
+.section-bg--cream {
+  background: var(--cream);
+}
+
+.section-bg--olive {
   background:
-    radial-gradient(ellipse 70% 80% at 80% 10%, rgba(184, 120, 54, 0.18), transparent 50%),
-    linear-gradient(160deg, var(--olive-deep), var(--olive));
+    radial-gradient(ellipse 70% 80% at 85% 0%, rgba(184, 120, 54, 0.2), transparent 55%),
+    linear-gradient(165deg, var(--olive-deep) 0%, var(--olive) 100%);
   color: var(--cream);
 }
 
-.section--olive h2,
-.section--olive h3 {
+.section-bg--olive h2,
+.section-bg--olive h3 {
+  color: var(--cream);
+}
+
+.section-bg--brown {
+  background: var(--brown);
   color: var(--cream);
 }
 
@@ -496,8 +508,7 @@ p {
 
 /* ——— Occasions (compact) ——— */
 .occasions-strip {
-  padding: 1.35rem 0 1.6rem;
-  border-bottom: 1px dashed rgba(184, 120, 54, 0.25);
+  padding: 1.5rem 0 1.75rem;
 }
 
 .occasions-strip-inner {
@@ -527,7 +538,7 @@ p {
   padding: 0.4rem 0.95rem;
   border-radius: var(--radius-pill);
   background: var(--white);
-  border: 1px solid rgba(184, 120, 54, 0.2);
+  border: 1px solid rgba(58, 37, 23, 0.08);
   color: var(--text-muted);
   font-size: 0.92rem;
   font-weight: 500;
@@ -595,7 +606,7 @@ p {
 .tag-list li {
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-pill);
-  background: var(--cream-deep);
+  background: var(--cream);
   color: var(--brown);
   font-size: 0.88rem;
   font-weight: 500;
@@ -612,7 +623,8 @@ p {
   padding: 1.75rem 1.5rem;
   border-radius: var(--radius);
   background: var(--white);
-  border: 1px solid rgba(58, 37, 23, 0.05);
+  border: 1px solid rgba(58, 37, 23, 0.06);
+  box-shadow: 0 8px 24px rgba(58, 37, 23, 0.04);
 }
 
 .why-icon {
@@ -794,17 +806,6 @@ p {
   box-shadow:
     0 0 0 6px rgba(255, 252, 247, 0.15),
     0 12px 32px rgba(0, 0, 0, 0.28);
-  animation: float-soft 4s ease-in-out infinite;
-}
-
-@keyframes float-soft {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
 }
 
 .cta-band h2 {
@@ -936,60 +937,19 @@ p {
 
 /* ——— Footer ——— */
 .site-footer {
-  padding: 3rem 0 6rem;
+  padding: 1.75rem 0;
   background: color-mix(in srgb, var(--brown) 94%, black);
   color: rgba(248, 244, 238, 0.75);
 }
 
 .footer-inner {
-  display: grid;
-  gap: 1.75rem;
-}
-
-.footer-brand p {
-  margin-top: 0;
-  max-width: 28rem;
-  font-size: 0.98rem;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.5rem;
-}
-
-.footer-links a {
-  font-weight: 500;
-  color: rgba(248, 244, 238, 0.8);
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: var(--cream);
+  text-align: center;
 }
 
 .footer-copy {
+  margin: 0;
   font-size: 0.88rem;
-  opacity: 0.7;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(248, 244, 238, 0.1);
-}
-
-/* ——— Mobile sticky CTA ——— */
-.mobile-cta {
-  display: none;
-  position: fixed;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 90;
-  padding: 0.95rem 1.25rem;
-  border-radius: var(--radius-pill);
-  background: var(--caramel);
-  color: var(--white);
-  font-weight: 700;
-  text-align: center;
-  box-shadow: 0 12px 32px rgba(58, 37, 23, 0.28);
+  opacity: 0.75;
 }
 
 /* ——— Reveal animations ——— */
@@ -1019,8 +979,7 @@ p {
     scroll-behavior: auto;
   }
 
-  .reveal,
-    .cta-band-mark {
+  .reveal {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
@@ -1099,7 +1058,7 @@ p {
 
   .hero {
     min-height: auto;
-    padding-bottom: 5.5rem;
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
   }
 
   .hero-logo {
@@ -1118,24 +1077,6 @@ p {
   .gallery-item,
   .gallery-item--wide {
     grid-column: span 12;
-  }
-
-  .mobile-cta {
-    display: block;
-  }
-
-  .site-footer {
-    padding-bottom: 7rem;
-  }
-
-  body.form-in-view .mobile-cta {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(120%);
-  }
-
-  .mobile-cta {
-    transition: opacity 0.25s, transform 0.3s var(--ease);
   }
 }
 

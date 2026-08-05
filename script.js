@@ -57,15 +57,4 @@
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
-
-  const kontakt = document.getElementById("kontakt");
-  if (kontakt && "IntersectionObserver" in window) {
-    const contactIo = new IntersectionObserver(
-      ([entry]) => {
-        document.body.classList.toggle("form-in-view", entry.isIntersecting);
-      },
-      { threshold: 0.35 }
-    );
-    contactIo.observe(kontakt);
-  }
 })();
