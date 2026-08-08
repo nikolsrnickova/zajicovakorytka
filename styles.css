@@ -437,14 +437,11 @@ p {
 }
 
 .offer--misy {
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1.15fr 0.85fr;
 }
 
 .offer--misy .offer-media {
-  aspect-ratio: 4 / 5;
-  max-width: 26rem;
-  margin-inline: auto;
-  border-radius: 1.75rem;
+  aspect-ratio: 1024 / 859;
 }
 
 .offer-media img {
@@ -457,8 +454,7 @@ p {
 }
 
 .offer--misy .offer-media img {
-  object-position: center 42%;
-  filter: saturate(1.06) brightness(0.98);
+  filter: saturate(1.04) brightness(0.98);
 }
 
 .offer:hover .offer-media img {
@@ -734,10 +730,6 @@ p {
   .offer--misy {
     grid-template-columns: 1fr;
     direction: ltr;
-  }
-
-  .offer--misy .offer-media {
-    max-width: 22rem;
   }
 
   .why-grid {
