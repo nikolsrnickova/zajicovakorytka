@@ -16,10 +16,11 @@ python3 -m http.server 8080
 
 - `index.html` — obsah a SEO
 - `styles.css` — design systém a layout
-- `script.js` — navigace, animace, formulář
+- `script.js` — navigace, scroll a reveal animace
 - `assets/images/` — fotografie
-- `assets/icons/` — maskot zajíce a ikony
+- `assets/icons/` — SVG sprite (záloha; ikony jsou i inline v HTML)
 
 ## Kontakt
 
-Objednávky probíhají telefonicky: **+420 724 621 572**.
+Objednávky telefonicky: **+420 724 621 572** nebo **+420 739 264 456**.  
+Vyzvednutí: Řeka · dovoz zdarma do 10 km.
