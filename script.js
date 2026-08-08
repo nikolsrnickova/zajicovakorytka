@@ -4,6 +4,21 @@
   const toggle = document.querySelector(".nav-toggle");
   const year = document.getElementById("year");
 
+  // Reload often restores #kontakt (bottom). Open at top on refresh.
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  const navEntry = performance.getEntriesByType("navigation")[0];
+  const isReload = navEntry?.type === "reload";
+  if (isReload) {
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  } else if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+
   if (year) year.textContent = String(new Date().getFullYear());
 
   const onScroll = () => {

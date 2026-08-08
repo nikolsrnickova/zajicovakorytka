@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=5" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,46 +70,84 @@
   </header>
 
   <main id="obsah">
-    <!-- HERO — logo-first, bez fotografie -->
+    <!-- HERO  -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-decor" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <img
-          class="hero-logo reveal"
-          src="assets/images/logo.jpg"
-          alt="Zajícova korýtka — masová koryta &amp; catering"
-          width="1024"
-          height="1024"
-        />
-        <h1 id="hero-heading" class="reveal delay-1">Poctivá korýtka a catering pro každou příležitost</h1>
-        <p class="hero-lead reveal delay-2">Domácí chuť, kvalitní suroviny a servis bez starostí.</p>
-        <div class="hero-cta reveal delay-3">
-          <a class="btn btn-primary" href="#kontakt">Domluvit catering</a>
-          <a class="btn btn-secondary" href="#nabidka">Prohlédnout nabídku</a>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-heading" class="reveal delay-1">
+            Poctivá korýtka a catering
+            <span class="hero-accent">pro každou příležitost</span>
+          </h1>
+          <p class="hero-lead reveal delay-2">
+            Domácí chuť, kvalitní suroviny a servis bez starostí.<br />
+            Připravíme vše přesně podle vašich představ.
+          </p>
+          <div class="hero-cta reveal delay-3">
+            <a class="btn btn-primary" href="#kontakt">Zavolat</a>
+            <a class="btn btn-secondary" href="#nabidka">Prohlédnout nabídku</a>
+          </div>
+        </div>
+        <div class="hero-media reveal">
+          <img
+            src="assets/images/korytka.jpg"
+            alt="Poctivé masové korýtko na dřevěném prkénku"
+            width="1200"
+            height="800"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
 
-    <!-- INTRO STRIP -->
-    <section class="intro-strip section-bg section-bg--soft" aria-label="O značce">
+    <!-- PŘÍLEŽITOSTI + INTRO -->
+    <section class="section section-bg section-bg--soft" id="prilezitosti" aria-labelledby="prilezitosti-heading">
       <div class="container">
-        <p class="intro-text reveal">
-          Připravujeme poctivé masové i vegetariánské korýtka a catering,
-          díky kterému si hostitel může užít svou akci místo stání u plotny.
-        </p>
-      </div>
-    </section>
+        <header class="about-occasions-header reveal">
+          <p class="eyebrow">Pro koho vaříme</p>
+          <h2 id="prilezitosti-heading">Pro každou příležitost</h2>
+          <p class="about-occasions-lead">
+            Připravujeme poctivé masové i vegetariánské korýtka a catering,
+            díky kterému si hostitel může užít svou akci místo stání u plotny.
+          </p>
+        </header>
 
-    <!-- PŘÍLEŽITOSTI — kompaktní přehled -->
-    <section class="occasions-strip section-bg section-bg--warm" id="prilezitosti" aria-label="Pro jaké příležitosti">
-      <div class="container occasions-strip-inner reveal">
-        <p class="occasions-label">Hodí se na</p>
-        <ul class="occasions-chips">
-          <li>Rodinné oslavy</li>
-          <li>Firemní akce</li>
-          <li>Svatby</li>
-          <li>Zahradní párty</li>
-          <li>Kolaudace</li>
+        <ul class="occasion-cards">
+          <li class="occasion-card reveal">
+            <span class="occasion-card-icon" aria-hidden="true"><svg width="36" height="36"><use href="#icon-party"/></svg></span>
+            <div>
+              <h3>Rodinné oslavy</h3>
+              <p>Narozeniny, výročí i rodinná setkání.</p>
+            </div>
+          </li>
+          <li class="occasion-card reveal delay-1">
+            <span class="occasion-card-icon" aria-hidden="true"><svg width="36" height="36"><use href="#icon-office"/></svg></span>
+            <div>
+              <h3>Firemní akce</h3>
+              <p>Školení, večírky a teambuildingy.</p>
+            </div>
+          </li>
+          <li class="occasion-card reveal delay-2">
+            <span class="occasion-card-icon" aria-hidden="true"><svg width="36" height="36"><use href="#icon-wedding"/></svg></span>
+            <div>
+              <h3>Svatby</h3>
+              <p>Večerní raut, druhá večeře i občerstvení pro hosty.</p>
+            </div>
+          </li>
+          <li class="occasion-card reveal">
+            <span class="occasion-card-icon" aria-hidden="true"><svg width="36" height="36"><use href="#icon-garden"/></svg></span>
+            <div>
+              <h3>Zahradní párty</h3>
+              <p>Poctivé jídlo venku — vy se bavíte, my postaráme o stůl.</p>
+            </div>
+          </li>
+          <li class="occasion-card reveal delay-1">
+            <span class="occasion-card-icon" aria-hidden="true"><svg width="36" height="36"><use href="#icon-home"/></svg></span>
+            <div>
+              <h3>Kolaudace</h3>
+              <p>Slavnostní občerstvení, které ladí s novým domovem.</p>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
