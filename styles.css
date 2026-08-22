@@ -781,13 +781,22 @@ p {
 
 
   .brand-seal {
-    top: calc(var(--header-h) - 2.6rem);
-    left: 0.65rem;
-    width: clamp(5.75rem, 24vw, 7.25rem);
+    top: calc(var(--header-h) - 3.4rem);
+    left: 0.75rem;
+    transform: rotate(-8deg);
+  }
+
+  .brand-seal:hover,
+  .brand-seal:focus-visible {
+    transform: rotate(-8deg) scale(1.04);
+  }
+
+  .header-inner {
+    padding-left: 1rem;
   }
 
   .hero {
-    padding: 3rem 0 2.5rem;
+    padding: 8rem 0 2.5rem;
   }
 
   .hero-grid {
@@ -804,7 +813,6 @@ p {
     aspect-ratio: 4 / 5;
   }
 
-
   .hero-content {
     max-width: none;
   }
@@ -815,6 +823,10 @@ p {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 7.5rem 0 2.25rem;
+  }
+
   .hero-cta {
     flex-direction: column;
   }
