@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="styles.css?v=52" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,7 +48,7 @@
     <symbol id="icon-equipment" viewBox="0 0 48 48" fill="none"><path d="M12 20h24l-2 14H14l-2-14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14h12v6H18z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 38h16M20 34v4M28 34v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   </svg>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="header-inner">
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otevřít menu">
         <span class="nav-toggle-bar"></span>
@@ -65,21 +65,34 @@
     </div>
   </header>
 
-  <a class="brand-seal" href="#top" aria-label="Zajícova korýtka — úvod">
-    <img
-      src="assets/images/logo.svg"
-      alt=""
-      width="160"
-      height="152"
-      decoding="async"
-    />
-  </a>
-
   <main id="obsah">
-    <!-- HERO  -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-grid">
-        <div class="hero-content">
+    <section class="hero hero--banner" id="top" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__photo">
+          <img
+            src="assets/images/korytka.jpg"
+            alt=""
+            width="768"
+            height="1024"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+      <div class="hero__blend" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <a class="hero__logo" href="#top" aria-label="Zajícova korýtka — úvod">
+          <img
+            src="assets/images/logo.svg"
+            alt=""
+            width="160"
+            height="152"
+            decoding="async"
+          />
+        </a>
+
+        <div class="hero__content">
           <h1 id="hero-heading" class="reveal delay-1">
             Poctivá korýtka a catering
             <span class="hero-accent">pro každou příležitost</span>
@@ -93,17 +106,17 @@
             <a class="btn btn-secondary" href="#nabidka">Prohlédnout nabídku</a>
           </div>
         </div>
-        <div class="hero-visual reveal">
-          <div class="hero-media">
-            <img
-              src="assets/images/korytka.jpg?v=2"
-              alt="Plná dřevěná korýtka s pečeným a smaženým masem"
-              width="768"
-              height="1024"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </div>
+      </div>
+
+      <div class="hero__photo-mobile">
+        <div class="hero__photo">
+          <img
+            src="assets/images/korytka.jpg"
+            alt="Plná dřevěná korýtka s pečeným a smaženým masem"
+            width="768"
+            height="1024"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
