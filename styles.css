@@ -268,7 +268,7 @@ p {
 
 .hero__bg {
   position: absolute;
-  inset: 0 0 0 26%;
+  inset: 0 0 0 36%;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -390,12 +390,12 @@ p {
     linear-gradient(
       90deg,
       var(--cream) 0%,
-      var(--cream) 32%,
-      rgba(247, 241, 230, 0.72) 36%,
-      rgba(247, 241, 230, 0.42) 42%,
-      rgba(247, 241, 230, 0.18) 48%,
+      var(--cream) 38%,
+      rgba(247, 241, 230, 0.72) 42%,
+      rgba(247, 241, 230, 0.42) 46%,
+      rgba(247, 241, 230, 0.18) 50%,
       rgba(247, 241, 230, 0.06) 54%,
-      transparent 66%
+      transparent 64%
     ),
     linear-gradient(
       180deg,
@@ -444,7 +444,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 32rem;
+  max-width: min(46rem, 54vw);
   padding-top: 0.25rem;
 }
 
