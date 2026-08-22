@@ -9,21 +9,21 @@
   <meta property="og:description" content="Poctivá korýtka a catering připravené přesně podle vašich představ. Domácí chuť, kvalitní suroviny a servis bez starostí." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="cs_CZ" />
-  <meta property="og:image" content="assets/images/logo.jpg" />
+  <meta property="og:image" content="assets/images/logo.svg" />
   <title>Zajícova korýtka | Poctivá korýtka a catering</title>
-  <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg" />
-  <link rel="apple-touch-icon" href="assets/images/logo.jpg" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/images/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=22" />
+  <link rel="stylesheet" href="styles.css?v=28" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FoodEstablishment",
     "name": "Zajícova korýtka",
     "description": "Poctivá korýtka a catering připravené přesně podle vašich představ.",
-    "image": "assets/images/logo.jpg",
+    "image": "assets/images/logo.svg",
     "servesCuisine": "Česká",
     "priceRange": "$$",
     "address": {
@@ -50,7 +50,6 @@
 
   <header class="site-header" id="top">
     <div class="header-inner">
-      <a class="nav-brand" href="#top">Zajícova <em>korýtka</em></a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otevřít menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -65,6 +64,16 @@
       </nav>
     </div>
   </header>
+
+  <a class="brand-seal" href="#top" aria-label="Zajícova korýtka — úvod">
+    <img
+      src="assets/images/logo.svg"
+      alt=""
+      width="160"
+      height="152"
+      decoding="async"
+    />
+  </a>
 
   <main id="obsah">
     <!-- HERO  -->
@@ -84,15 +93,17 @@
             <a class="btn btn-secondary" href="#nabidka">Prohlédnout nabídku</a>
           </div>
         </div>
-        <div class="hero-media reveal">
-          <img
-            src="assets/images/korytka.jpg?v=2"
-            alt="Plná dřevěná korýtka s pečeným a smaženým masem"
-            width="768"
-            height="1024"
-            fetchpriority="high"
-            decoding="async"
-          />
+        <div class="hero-visual reveal">
+          <div class="hero-media">
+            <img
+              src="assets/images/korytka.jpg?v=2"
+              alt="Plná dřevěná korýtka s pečeným a smaženým masem"
+              width="768"
+              height="1024"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -245,7 +256,7 @@
     <!-- KONTAKT -->
     <section class="cta-band" id="kontakt" aria-labelledby="kontakt-heading">
       <div class="container cta-band-inner reveal">
-        <img src="assets/images/logo.jpg" alt="Zajícova korýtka" width="1024" height="1024" class="cta-band-mark" />
+        <img src="assets/images/logo.svg" alt="Zajícova korýtka" width="160" height="152" class="cta-band-mark" />
         <h2 id="kontakt-heading">Nechte vaření na nás</h2>
         <p class="cta-band-lead">Objednávky a domluvu řešíme telefonicky - ozvěte se a připravíme nabídku podle vašich představ.</p>
 
@@ -253,9 +264,9 @@
           <li>
             <span class="contact-label">Telefon</span>
             <span class="contact-value">
-              <a href="tel:+420724621572">+420 724 621 572</a>
+              <a href="tel:+420724621572">724 621 572</a>
               <span class="contact-or" aria-hidden="true">nebo</span>
-              <a href="tel:+420739264456">+420 739 264 456</a>
+              <a href="tel:+420739264456">739 264 456</a>
             </span>
           </li>
           <li>
