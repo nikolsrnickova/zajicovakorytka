@@ -1,0 +1,7 @@
+# Preview / staging — block crawlers.
+# Before public launch, replace with:
+# User-agent: *
+# Allow: /
+
+User-agent: *
+Disallow: /
