@@ -815,6 +815,14 @@ p {
     direction: ltr;
   }
 
+  .offer-body {
+    order: 1;
+  }
+
+  .offer-media {
+    order: 2;
+  }
+
   .why-grid {
     grid-template-columns: 1fr 1fr;
   }
