@@ -270,20 +270,21 @@ p {
 
 .hero__bg {
   position: absolute;
-  inset: 0 0 0 36%;
+  inset: 0 0 0 50%;
   z-index: 0;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: clamp(0.25rem, 0.8vh, 0.5rem) 0 clamp(0.25rem, 0.8vh, 0.5rem) 0;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
   background: var(--cream);
+  overflow: hidden;
 }
 
 .hero__photo {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -291,96 +292,48 @@ p {
 .hero__photo::before {
   content: "";
   position: absolute;
-  inset: -4% 55% -4% -8%;
+  inset: 0 auto 0 0;
+  width: 42%;
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(
     90deg,
     var(--cream) 0%,
-    rgba(247, 241, 230, 0.75) 22%,
-    rgba(247, 241, 230, 0.35) 42%,
-    rgba(247, 241, 230, 0.1) 62%,
+    rgba(247, 241, 230, 0.78) 28%,
+    rgba(247, 241, 230, 0.38) 55%,
+    rgba(247, 241, 230, 0.12) 78%,
     transparent 100%
   );
 }
 
 .hero__photo::after {
-  content: "";
-  position: absolute;
-  inset: -3%;
-  z-index: 2;
-  pointer-events: none;
-  background:
-    radial-gradient(
-      ellipse 88% 84% at 70% 50%,
-      transparent 44%,
-      rgba(247, 241, 230, 0.18) 62%,
-      rgba(247, 241, 230, 0.55) 78%,
-      rgba(247, 241, 230, 0.9) 92%,
-      var(--cream) 100%
-    );
+  content: none;
 }
 
 .hero__photo img {
   display: block;
-  width: auto;
-  height: min(88svh, 42rem);
-  max-width: 108%;
+  width: 100%;
+  height: 100%;
+  max-width: none;
   max-height: none;
-  object-fit: contain;
-  object-position: 76% center;
-  transform: rotate(9deg) scale(1.14) translateX(2%);
-  transform-origin: 72% center;
-  -webkit-mask-image:
-    linear-gradient(
-      94deg,
-      transparent 0%,
-      transparent 4%,
-      rgba(0, 0, 0, 0.18) 12%,
-      rgba(0, 0, 0, 0.55) 20%,
-      #000 32%,
-      #000 84%,
-      rgba(0, 0, 0, 0.4) 92%,
-      rgba(0, 0, 0, 0.1) 97%,
-      transparent 100%
-    ),
-    linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(0, 0, 0, 0.12) 10%,
-      rgba(0, 0, 0, 0.5) 16%,
-      #000 24%,
-      #000 76%,
-      rgba(0, 0, 0, 0.5) 84%,
-      rgba(0, 0, 0, 0.12) 90%,
-      transparent 100%
-    );
-  mask-image:
-    linear-gradient(
-      94deg,
-      transparent 0%,
-      transparent 4%,
-      rgba(0, 0, 0, 0.18) 12%,
-      rgba(0, 0, 0, 0.55) 20%,
-      #000 32%,
-      #000 84%,
-      rgba(0, 0, 0, 0.4) 92%,
-      rgba(0, 0, 0, 0.1) 97%,
-      transparent 100%
-    ),
-    linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(0, 0, 0, 0.12) 10%,
-      rgba(0, 0, 0, 0.5) 16%,
-      #000 24%,
-      #000 76%,
-      rgba(0, 0, 0, 0.5) 84%,
-      rgba(0, 0, 0, 0.12) 90%,
-      transparent 100%
-    );
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
+  object-fit: cover;
+  object-position: 58% center;
+  transform: rotate(4deg) scale(1.1);
+  transform-origin: 50% center;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 8%,
+    rgba(0, 0, 0, 0.75) 16%,
+    #000 28%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 8%,
+    rgba(0, 0, 0, 0.75) 16%,
+    #000 28%
+  );
 }
 
 .hero__blend {
@@ -388,26 +341,15 @@ p {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      var(--cream) 0%,
-      var(--cream) 38%,
-      rgba(247, 241, 230, 0.72) 42%,
-      rgba(247, 241, 230, 0.42) 46%,
-      rgba(247, 241, 230, 0.18) 50%,
-      rgba(247, 241, 230, 0.06) 54%,
-      transparent 64%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(247, 241, 230, 0.65) 0%,
-      rgba(247, 241, 230, 0.25) 12%,
-      transparent 26%,
-      transparent 74%,
-      rgba(247, 241, 230, 0.25) 88%,
-      rgba(247, 241, 230, 0.58) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    var(--cream) 0%,
+    var(--cream) 46%,
+    rgba(247, 241, 230, 0.7) 50%,
+    rgba(247, 241, 230, 0.32) 54%,
+    rgba(247, 241, 230, 0.1) 58%,
+    transparent 64%
+  );
 }
 
 .hero__inner {
@@ -447,7 +389,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: min(46rem, 54vw);
+  max-width: min(44rem, 52vw);
   padding-top: 0.25rem;
 }
 
@@ -458,10 +400,11 @@ p {
 .hero h1 {
   color: var(--brown);
   margin-bottom: 1.15rem;
-  font-size: clamp(2.35rem, 4.6vw, 3.55rem);
+  font-size: clamp(2.1rem, 3.7vw, 3.1rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .hero-accent {
@@ -914,6 +857,10 @@ p {
   .hero__content {
     max-width: none;
     padding-top: 0;
+  }
+
+  .hero h1 {
+    white-space: normal;
   }
 
   .hero__photo-mobile {
