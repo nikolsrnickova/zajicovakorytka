@@ -262,31 +262,23 @@ p {
 /* ——— Hero ——— */
 .hero--banner {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: min(88svh, 42rem);
   background: var(--cream);
   color: var(--brown);
   overflow: clip;
 }
 
-.hero__bg {
+.hero__photo {
   position: absolute;
   inset: 0 0 0 50%;
   z-index: 0;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0;
-  background: var(--cream);
-  overflow: hidden;
-}
-
-.hero__photo {
-  position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
+  background: var(--cream);
 }
 
 .hero__photo::before {
@@ -304,10 +296,6 @@ p {
     rgba(247, 241, 230, 0.12) 78%,
     transparent 100%
   );
-}
-
-.hero__photo::after {
-  content: none;
 }
 
 .hero__photo img {
@@ -391,10 +379,6 @@ p {
   justify-content: flex-start;
   max-width: min(44rem, 52vw);
   padding-top: 0.25rem;
-}
-
-.hero__photo-mobile {
-  display: none;
 }
 
 .hero h1 {
@@ -837,7 +821,6 @@ p {
     min-height: auto;
   }
 
-  .hero__bg,
   .hero__blend {
     display: none;
   }
@@ -863,22 +846,25 @@ p {
     white-space: normal;
   }
 
-  .hero__photo-mobile {
-    display: block;
+  .hero__photo {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    width: auto;
+    height: auto;
     margin-top: 1.5rem;
     padding: 0 1.25rem 1.5rem;
-    background: var(--cream);
-    line-height: 0;
+    overflow: visible;
   }
 
-  .hero__photo-mobile .hero__photo {
-    position: relative;
+  .hero__photo::before {
+    content: none;
   }
 
-  .hero__photo-mobile .hero__photo::after {
+  .hero__photo::after {
     content: "";
     position: absolute;
-    inset: -3%;
+    inset: -3% 1rem;
     z-index: 1;
     pointer-events: none;
     background:
@@ -891,11 +877,11 @@ p {
       );
   }
 
-  .hero__photo-mobile .hero__photo img {
+  .hero__photo img {
     width: 100%;
     max-width: 100%;
-    margin-inline: auto;
     height: auto;
+    margin-inline: auto;
     object-fit: contain;
     object-position: center center;
     transform: rotate(6deg);
