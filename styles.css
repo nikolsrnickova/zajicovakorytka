@@ -691,8 +691,19 @@ p {
 
 .cta-band-lead {
   color: rgba(248, 244, 238, 0.85);
-  margin: 0 0 0.75rem;
+  margin: 0;
   max-width: 30rem;
+}
+
+.cta-band-note {
+  margin: 0;
+  max-width: 28rem;
+  padding: 0.7rem 1rem;
+  border-radius: calc(var(--radius) - 0.5rem);
+  background: rgba(247, 241, 230, 0.1);
+  color: rgba(248, 244, 238, 0.92);
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .contact-details {
