@@ -558,6 +558,14 @@ p {
   line-height: 1.3;
 }
 
+.offer-price-extra {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.72em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
 .offer-note {
   font-size: 0.88rem;
   font-style: italic;
