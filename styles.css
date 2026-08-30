@@ -705,7 +705,7 @@ p {
 
 .cta-band-inner {
   text-align: center;
-  max-width: 36rem;
+  max-width: 52rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -730,13 +730,13 @@ p {
 .cta-band-lead {
   color: rgba(248, 244, 238, 0.85);
   margin: 0;
-  max-width: 30rem;
+  max-width: 48rem;
 }
 
 .cta-band-note {
   margin: 0;
-  max-width: 28rem;
-  padding: 0.7rem 1rem;
+  max-width: 40rem;
+  padding: 0.7rem 1.25rem;
   border-radius: calc(var(--radius) - 0.5rem);
   background: rgba(247, 241, 230, 0.1);
   color: rgba(248, 244, 238, 0.92);
