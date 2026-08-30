@@ -573,6 +573,18 @@ p {
   color: var(--text-muted);
 }
 
+.offer-options .offer-note {
+  margin-top: 0.65rem;
+}
+
+.offer-options .offer-note + .offer-note {
+  margin-top: 0.3rem;
+}
+
+.offer-options .offer-note + .offer-options-subtitle {
+  margin-top: 1.15rem;
+}
+
 .offer-options {
   margin: 1.15rem 0 1.25rem;
 }
