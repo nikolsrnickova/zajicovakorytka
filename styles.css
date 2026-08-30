@@ -578,17 +578,18 @@ p {
 }
 
 .option-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.35rem 1.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
+  columns: 2;
+  column-gap: 1.25rem;
 }
 
 .option-list li {
   position: relative;
   padding-left: 0.9rem;
+  margin: 0 0 0.35rem;
+  break-inside: avoid;
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.45;
@@ -981,6 +982,6 @@ p {
   }
 
   .option-list {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 }
