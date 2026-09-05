@@ -471,17 +471,9 @@ p {
 
 .offer {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(1.5rem, 4vw, 3.5rem);
-  align-items: center;
-}
-
-.offer--reverse {
-  direction: rtl;
-}
-
-.offer--reverse > * {
-  direction: ltr;
+  align-items: start;
 }
 
 .offer-media {
@@ -491,10 +483,8 @@ p {
   box-shadow: var(--shadow);
   border: 3px solid rgba(255, 252, 247, 0.95);
   outline: 1px solid rgba(184, 120, 54, 0.18);
-}
-
-.offer--korytka {
-  grid-template-columns: 1.05fr 0.95fr;
+  position: sticky;
+  top: calc(var(--header-h) + 1rem);
 }
 
 .offer--korytka .offer-media {
@@ -503,10 +493,6 @@ p {
 
 .offer--catering .offer-media {
   aspect-ratio: 1024 / 681;
-}
-
-.offer--misy {
-  grid-template-columns: 1.15fr 0.85fr;
 }
 
 .offer--misy .offer-media {
@@ -858,12 +844,14 @@ p {
 /* ——— Responsive ——— */
 @media (max-width: 960px) {
   .offer,
-  .offer--reverse,
   .offer--korytka,
   .offer--catering,
   .offer--misy {
     grid-template-columns: 1fr;
-    direction: ltr;
+  }
+
+  .offer-media {
+    position: static;
   }
 
   .offer-body {
