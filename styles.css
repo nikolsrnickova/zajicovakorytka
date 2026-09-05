@@ -470,21 +470,62 @@ p {
 }
 
 .offer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.offer--split .offer-top {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: center;
+}
+
+.offer--split .offer-intro > p:not(.offer-price):not(.offer-note) {
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.offer--split .offer-intro .offer-note {
+  margin-top: 0.85rem;
+}
+
+.offer--split .offer-intro .offer-note + .offer-note {
+  margin-top: 0.35rem;
+}
+
+.offer--split .offer-options {
+  margin: 0;
+  width: 100%;
+}
+
+.offer--split .offer-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.75rem;
   align-items: start;
+}
+
+.offer--split .offer-options-col .offer-options-subtitle:first-child {
+  margin-top: 0;
+}
+
+.offer--split .option-list {
+  columns: 1;
 }
 
 .offer-media {
   border-radius: calc(var(--radius) + 0.5rem);
   overflow: hidden;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
   box-shadow: var(--shadow);
   border: 3px solid rgba(255, 252, 247, 0.95);
   outline: 1px solid rgba(184, 120, 54, 0.18);
-  position: sticky;
-  top: calc(var(--header-h) + 1rem);
 }
 
 .offer--korytka .offer-media {
@@ -511,7 +552,8 @@ p {
   filter: saturate(1.04) brightness(0.98);
 }
 
-.offer-body h3 {
+.offer-body h3,
+.offer-intro h3 {
   margin-bottom: 0.75rem;
   font-size: clamp(1.75rem, 2.8vw, 2.25rem);
 }
@@ -843,23 +885,10 @@ p {
 
 /* ——— Responsive ——— */
 @media (max-width: 960px) {
-  .offer,
-  .offer--korytka,
-  .offer--catering,
-  .offer--misy {
+  .offer--split .offer-top,
+  .offer--split .offer-options-grid {
     grid-template-columns: 1fr;
-  }
-
-  .offer-media {
-    position: static;
-  }
-
-  .offer-body {
-    order: 1;
-  }
-
-  .offer-media {
-    order: 2;
+    gap: 1.25rem;
   }
 
   .why-grid {
