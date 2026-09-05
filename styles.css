@@ -536,10 +536,6 @@ p {
   aspect-ratio: 1024 / 681;
 }
 
-.offer--misy .offer-media {
-  aspect-ratio: 1024 / 859;
-}
-
 .offer-media img {
   width: 100%;
   height: 100%;
@@ -548,8 +544,36 @@ p {
   filter: saturate(1.04) brightness(0.96);
 }
 
+.offer--misy .offer-top {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: start;
+}
+
+.offer--misy .offer-media {
+  aspect-ratio: 3 / 4;
+  min-height: 22rem;
+  max-height: 34rem;
+  width: 100%;
+  max-width: 26rem;
+  justify-self: end;
+  margin-left: auto;
+}
+
 .offer--misy .offer-media img {
-  filter: saturate(1.04) brightness(0.98);
+  filter: saturate(1.05) brightness(0.98);
+  object-position: center right;
+}
+
+.offer--misy .offer-options--inline {
+  margin-top: 1.25rem;
+}
+
+.offer--misy .offer-options--inline .offer-options-title {
+  margin-bottom: 0.65rem;
+}
+
+.offer--misy .offer-options--inline .option-list {
+  columns: 1;
 }
 
 .offer-body h3,
