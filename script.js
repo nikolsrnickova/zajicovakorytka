@@ -72,4 +72,34 @@
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
+
+  // Aktualita / obsazenost — text se bere z aktualita.json
+  const aktualitaBand = document.getElementById("aktualita");
+  const aktualitaTitle = document.getElementById("aktualita-title");
+  const aktualitaText = document.getElementById("aktualita-text");
+
+  const loadAktualita = async () => {
+    if (!aktualitaBand || !aktualitaText) return;
+    try {
+      const res = await fetch(`aktualita.json?t=${Date.now()}`, { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      const text = typeof data.text === "string" ? data.text.trim() : "";
+      const active = data.active === true && text.length > 0;
+      if (!active) {
+        aktualitaBand.hidden = true;
+        return;
+      }
+      if (aktualitaTitle) {
+        aktualitaTitle.textContent =
+          typeof data.title === "string" ? data.title.trim() : "";
+      }
+      aktualitaText.textContent = text;
+      aktualitaBand.hidden = false;
+    } catch {
+      // Při chybě načtení banner nezobrazujeme
+    }
+  };
+
+  loadAktualita();
 })();

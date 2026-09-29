@@ -416,6 +416,42 @@ p {
   gap: 0.85rem;
 }
 
+/* ——— Aktualita / obsazenost ——— */
+.aktualita-band {
+  padding: 1rem 0;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--caramel) 22%, var(--cream)) 0%,
+      color-mix(in srgb, var(--caramel) 12%, var(--cream)) 100%
+    );
+  border-block: 1px solid color-mix(in srgb, var(--caramel) 32%, transparent);
+}
+
+.aktualita-band__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.85rem;
+}
+
+.aktualita-band__label {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.aktualita-band__text {
+  margin: 0;
+  flex: 1 1 16rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
 /* ——— Sections ——— */
 .section {
   padding: clamp(4rem, 8vw, 6.5rem) 0;
