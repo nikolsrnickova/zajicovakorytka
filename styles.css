@@ -519,19 +519,28 @@ p {
   align-items: center;
 }
 
+.offer--split .offer-intro h3 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+}
+
 .offer--split .offer-intro > p:not(.offer-price):not(.offer-note) {
   color: var(--text-muted);
-  margin-bottom: 0.65rem;
-  font-size: 1.125rem;
-  line-height: 1.75;
+  margin-bottom: 0.7rem;
+  font-size: 1.22rem;
+  line-height: 1.7;
 }
 
 .offer--split .offer-intro .offer-note {
-  margin-top: 0.85rem;
+  margin-top: 0.95rem;
+  font-size: 1.12rem;
 }
 
 .offer--split .offer-intro .offer-note + .offer-note {
-  margin-top: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.offer--split .offer-intro .tag-list li {
+  font-size: 1.12rem;
 }
 
 .offer--split .offer-options {
@@ -594,10 +603,15 @@ p {
 
 .offer--misy .offer-options--inline .offer-options-title {
   margin-bottom: 0.65rem;
+  font-size: 1.32rem;
 }
 
 .offer--misy .offer-options--inline .option-list {
   columns: 1;
+}
+
+.offer--misy .offer-options--inline .option-list li {
+  font-size: 1.2rem;
 }
 
 .offer-body h3,
