@@ -514,8 +514,8 @@ p {
 
 .offer--split .offer-top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 2.75rem);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.1rem, 2.4vw, 1.75rem);
   align-items: center;
 }
 
@@ -570,10 +570,9 @@ p {
   aspect-ratio: 3 / 4;
   min-height: 22rem;
   max-height: 34rem;
-  width: 100%;
-  max-width: 26rem;
+  width: 26rem;
+  max-width: min(26rem, 100%);
   justify-self: end;
-  margin-left: auto;
 }
 
 .offer-media img {
@@ -584,18 +583,13 @@ p {
   filter: saturate(1.04) brightness(0.96);
 }
 
-.offer--misy .offer-top {
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  align-items: start;
-}
-
 .offer--misy .offer-media img {
   filter: saturate(1.05) brightness(0.98);
   object-position: center right;
 }
 
 .offer--misy .offer-options--inline {
-  margin-top: 1.25rem;
+  margin-top: 1.85rem;
 }
 
 .offer--misy .offer-options--inline .offer-options-title {
