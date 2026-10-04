@@ -1117,6 +1117,10 @@ p {
     padding-top: 0;
   }
 
+  .hero h1 {
+    text-align: center;
+  }
+
   .hero__photo {
     position: relative;
     inset: auto;
