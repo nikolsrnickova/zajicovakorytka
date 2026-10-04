@@ -568,8 +568,15 @@ p {
   aspect-ratio: 1;
 }
 
-.offer--catering .offer-media {
-  aspect-ratio: 1024 / 681;
+.offer--catering .offer-media,
+.offer--misy .offer-media {
+  aspect-ratio: 3 / 4;
+  min-height: 22rem;
+  max-height: 34rem;
+  width: 100%;
+  max-width: 26rem;
+  justify-self: end;
+  margin-left: auto;
 }
 
 .offer-media img {
@@ -583,16 +590,6 @@ p {
 .offer--misy .offer-top {
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: start;
-}
-
-.offer--misy .offer-media {
-  aspect-ratio: 3 / 4;
-  min-height: 22rem;
-  max-height: 34rem;
-  width: 100%;
-  max-width: 26rem;
-  justify-self: end;
-  margin-left: auto;
 }
 
 .offer--misy .offer-media img {
