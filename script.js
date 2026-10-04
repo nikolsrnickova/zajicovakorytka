@@ -102,4 +102,69 @@
   };
 
   loadAktualita();
+
+  const gallery = document.querySelector("[data-gallery]");
+  if (gallery) {
+    const track = gallery.querySelector(".gallery-track");
+    const slides = [...gallery.querySelectorAll(".gallery-slide")];
+    const viewport = gallery.querySelector(".gallery-viewport");
+    const prevBtn = gallery.querySelector("[data-gallery-prev]");
+    const nextBtn = gallery.querySelector("[data-gallery-next]");
+    let index = 0;
+    let touchStartX = 0;
+
+    const perView = () => {
+      const value = Number.parseFloat(getComputedStyle(gallery).getPropertyValue("--gallery-per-view"));
+      return Number.isFinite(value) && value > 0 ? value : 3;
+    };
+
+    const gap = () => {
+      const value = Number.parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
+      return Number.isFinite(value) ? value : 0;
+    };
+
+    const maxIndex = () => Math.max(0, slides.length - perView());
+
+    const goTo = (nextIndex) => {
+      if (!slides.length || !track || !viewport) return;
+      index = Math.min(maxIndex(), Math.max(0, nextIndex));
+      const step = slides[0].getBoundingClientRect().width + gap();
+      track.style.transform = `translate3d(-${index * step}px, 0, 0)`;
+      slides.forEach((slide, i) => {
+        const visible = i >= index && i < index + perView();
+        slide.classList.toggle("is-active", visible);
+        const img = slide.querySelector("img");
+        if (img) img.setAttribute("aria-hidden", visible ? "false" : "true");
+      });
+      prevBtn?.toggleAttribute("disabled", index === 0);
+      nextBtn?.toggleAttribute("disabled", index === maxIndex());
+    };
+
+    prevBtn?.addEventListener("click", () => goTo(index - 1));
+    nextBtn?.addEventListener("click", () => goTo(index + 1));
+
+    viewport?.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goTo(index - 1);
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goTo(index + 1);
+      }
+    });
+
+    viewport?.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    viewport?.addEventListener("touchend", (e) => {
+      const delta = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(delta) < 40) return;
+      goTo(delta < 0 ? index + 1 : index - 1);
+    }, { passive: true });
+
+    goTo(0);
+    window.addEventListener("resize", () => goTo(index));
+  }
 })();
