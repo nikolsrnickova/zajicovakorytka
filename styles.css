@@ -564,10 +564,7 @@ p {
   outline: 1px solid rgba(184, 120, 54, 0.18);
 }
 
-.offer--korytka .offer-media {
-  aspect-ratio: 1;
-}
-
+.offer--korytka .offer-media,
 .offer--catering .offer-media,
 .offer--misy .offer-media {
   aspect-ratio: 3 / 4;
