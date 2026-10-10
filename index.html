@@ -28,7 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=107" />
+  <link rel="stylesheet" href="styles.css?v=108" />
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/images/korytka-480w.webp 480w, assets/images/korytka.webp 768w" imagesizes="(max-width: 760px) 100vw, 50vw" fetchpriority="high" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -115,14 +116,17 @@
       </div>
 
       <div class="hero__photo">
+        <picture>
+        <source type="image/webp" srcset="assets/images/korytka-480w.webp 480w, assets/images/korytka.webp 768w" sizes="(max-width: 760px) 100vw, 50vw" />
         <img
           src="assets/images/korytka.jpg"
           alt="Dřevěná masová korýtka"
           width="768"
           height="1024"
-          fetchpriority="high"
           decoding="async"
+          fetchpriority="high"
         />
+      </picture>
       </div>
     </section>
 
@@ -197,34 +201,46 @@
               </div>
             </div>
             <div class="offer-media">
-              <img
-                src="assets/images/korytka-2.jpg"
-                alt="Masové korýtko s pečeným masem a řízečky"
-                width="900"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/korytka-1.jpg"
-                alt="Tři masová korýtka připravená k servírování"
-                width="864"
-                height="1156"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/korytka-3.jpg"
-                alt="Dřevěné korýtko se smaženými specialitami"
-                width="773"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/korytka-4.jpg"
-                alt="Velké dřevěné korýtko s pečeným kolenem a řízečky"
-                width="661"
-                height="1000"
-                loading="lazy"
-              />
+              <picture>
+        <source type="image/webp" srcset="assets/images/korytka-2-480w.webp 480w, assets/images/korytka-2-800w.webp 800w, assets/images/korytka-2.webp 900w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/korytka-2.jpg"
+          alt="Masové korýtko s pečeným masem a řízečky"
+          width="900"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/korytka-1-480w.webp 480w, assets/images/korytka-1-800w.webp 800w, assets/images/korytka-1.webp 864w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/korytka-1.jpg"
+          alt="Tři masová korýtka připravená k servírování"
+          width="864"
+          height="1156"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/korytka-3-480w.webp 480w, assets/images/korytka-3.webp 773w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/korytka-3.jpg"
+          alt="Dřevěné korýtko se smaženými specialitami"
+          width="773"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/korytka-4-480w.webp 480w, assets/images/korytka-4.webp 661w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/korytka-4.jpg"
+          alt="Velké dřevěné korýtko s pečeným kolenem a řízečky"
+          width="661"
+          height="1000"
+          loading="lazy"
+        />
+      </picture>
             </div>
           </article>
 
@@ -281,34 +297,46 @@
               </div>
             </div>
             <div class="offer-media">
-              <img
-                src="assets/images/catering-1.jpg"
-                alt="Příprava řízků"
-                width="884"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/catering-2.jpg"
-                alt="Řízky připravené v kuchyni"
-                width="849"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/catering-3.jpg"
-                alt="Žebra, zelenina a saláty"
-                width="750"
-                height="1000"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/catering-4.jpg"
-                alt="Připravený catering k rozvozu"
-                width="922"
-                height="1200"
-                loading="lazy"
-              />
+              <picture>
+        <source type="image/webp" srcset="assets/images/catering-1-480w.webp 480w, assets/images/catering-1-800w.webp 800w, assets/images/catering-1.webp 884w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/catering-1.jpg"
+          alt="Příprava řízků"
+          width="884"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/catering-2-480w.webp 480w, assets/images/catering-2-800w.webp 800w, assets/images/catering-2.webp 849w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/catering-2.jpg"
+          alt="Řízky připravené v kuchyni"
+          width="849"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/catering-3-480w.webp 480w, assets/images/catering-3.webp 750w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/catering-3.jpg"
+          alt="Žebra, zelenina a saláty"
+          width="750"
+          height="1000"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/catering-4-480w.webp 480w, assets/images/catering-4-800w.webp 800w, assets/images/catering-4.webp 922w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/catering-4.jpg"
+          alt="Připravený catering k rozvozu"
+          width="922"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
             </div>
           </article>
 
@@ -338,34 +366,46 @@
               </ul>
             </div>
             <div class="offer-media">
-              <img
-                src="assets/images/misa-syrova.jpg"
-                alt="Sýrová obložená mísa"
-                width="836"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/misa-salamova.jpg"
-                alt="Uzeninová obložená mísa"
-                width="865"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/misa-zabijackova.jpg"
-                alt="Zabijačková obložená mísa"
-                width="864"
-                height="1200"
-                loading="lazy"
-              />
-              <img
-                src="assets/images/misa-mix.jpg"
-                alt="Kombinovaná obložená mísa"
-                width="908"
-                height="1200"
-                loading="lazy"
-              />
+              <picture>
+        <source type="image/webp" srcset="assets/images/misa-syrova-480w.webp 480w, assets/images/misa-syrova-800w.webp 800w, assets/images/misa-syrova.webp 836w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/misa-syrova.jpg"
+          alt="Sýrová obložená mísa"
+          width="836"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/misa-salamova-480w.webp 480w, assets/images/misa-salamova-800w.webp 800w, assets/images/misa-salamova.webp 865w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/misa-salamova.jpg"
+          alt="Uzeninová obložená mísa"
+          width="865"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/misa-zabijackova-480w.webp 480w, assets/images/misa-zabijackova-800w.webp 800w, assets/images/misa-zabijackova.webp 864w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/misa-zabijackova.jpg"
+          alt="Zabijačková obložená mísa"
+          width="864"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
+              <picture>
+        <source type="image/webp" srcset="assets/images/misa-mix-480w.webp 480w, assets/images/misa-mix-800w.webp 800w, assets/images/misa-mix.webp 908w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/misa-mix.jpg"
+          alt="Kombinovaná obložená mísa"
+          width="908"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
             </div>
           </article>
         </div>
@@ -385,40 +425,148 @@
             <div class="gallery-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Fotogalerie">
               <ul class="gallery-track">
                 <li class="gallery-slide is-active">
-                  <img src="assets/images/fotogalerie/korytko-1.jpg" alt="Dřevěné korýtko" width="565" height="1000" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/korytko-1-480w.webp 480w, assets/images/fotogalerie/korytko-1.webp 565w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/korytko-1.jpg"
+          alt="Dřevěné korýtko"
+          width="565"
+          height="1000"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/korytko-2.jpg" alt="Masové korýtko" width="709" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/korytko-2-480w.webp 480w, assets/images/fotogalerie/korytko-2.webp 709w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/korytko-2.jpg"
+          alt="Masové korýtko"
+          width="709"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/korytka-3.jpg" alt="Masová korýtka" width="1200" height="767" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/korytka-3-480w.webp 480w, assets/images/fotogalerie/korytka-3-800w.webp 800w, assets/images/fotogalerie/korytka-3.webp 1200w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/korytka-3.jpg"
+          alt="Masová korýtka"
+          width="1200"
+          height="767"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/korytka-5.jpg" alt="Masová korýtka s pečeným kolenem" width="611" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/korytka-5-480w.webp 480w, assets/images/fotogalerie/korytka-5.webp 611w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/korytka-5.jpg"
+          alt="Masová korýtka s pečeným kolenem"
+          width="611"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/korytka-klobasa.jpg" alt="Masová korýtka s klobásou" width="809" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/korytka-klobasa-480w.webp 480w, assets/images/fotogalerie/korytka-klobasa-800w.webp 800w, assets/images/fotogalerie/korytka-klobasa.webp 809w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/korytka-klobasa.jpg"
+          alt="Masová korýtka s klobásou"
+          width="809"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/bramboraky.jpg" alt="Bramboráky" width="948" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/bramboraky-480w.webp 480w, assets/images/fotogalerie/bramboraky-800w.webp 800w, assets/images/fotogalerie/bramboraky.webp 948w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/bramboraky.jpg"
+          alt="Bramboráky"
+          width="948"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/hamburgery.jpg" alt="Mini hamburgery" width="900" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/hamburgery-480w.webp 480w, assets/images/fotogalerie/hamburgery-800w.webp 800w, assets/images/fotogalerie/hamburgery.webp 900w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/hamburgery.jpg"
+          alt="Mini hamburgery"
+          width="900"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/catering-rizky.jpg" alt="Řízky s bramborovým salátem" width="561" height="1000" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/catering-rizky-480w.webp 480w, assets/images/fotogalerie/catering-rizky.webp 561w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/catering-rizky.jpg"
+          alt="Řízky s bramborovým salátem"
+          width="561"
+          height="1000"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/catering-kacena.jpg" alt="Kachna s knedlíky a zelím" width="785" height="1000" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/catering-kacena-480w.webp 480w, assets/images/fotogalerie/catering-kacena.webp 785w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/catering-kacena.jpg"
+          alt="Kachna s knedlíky a zelím"
+          width="785"
+          height="1000"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/misy.jpg" alt="Obložené mísy" width="768" height="1024" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/misy-480w.webp 480w, assets/images/fotogalerie/misy.webp 768w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/misy.jpg"
+          alt="Obložené mísy"
+          width="768"
+          height="1024"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/misy-chlebicky.jpg" alt="Obložené mísy a chlebíčky" width="594" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/misy-chlebicky-480w.webp 480w, assets/images/fotogalerie/misy-chlebicky.webp 594w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/misy-chlebicky.jpg"
+          alt="Obložené mísy a chlebíčky"
+          width="594"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
                 <li class="gallery-slide">
-                  <img src="assets/images/fotogalerie/tatarak-2.jpg" alt="Tatarák" width="900" height="1200" loading="lazy" />
+                  <picture>
+        <source type="image/webp" srcset="assets/images/fotogalerie/tatarak-2-480w.webp 480w, assets/images/fotogalerie/tatarak-2-800w.webp 800w, assets/images/fotogalerie/tatarak-2.webp 900w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/fotogalerie/tatarak-2.jpg"
+          alt="Tatarák"
+          width="900"
+          height="1200"
+          loading="lazy"
+        />
+      </picture>
                 </li>
               </ul>
             </div>
@@ -512,22 +660,28 @@
         </ul>
 
         <div class="contact-photos">
-          <img
-            src="assets/images/provozovna-kuchyn.jpg"
-            alt="Kuchyně provozovny"
-            width="900"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="assets/images/provozovna-vstup.jpg"
-            alt="Vstup do provozovny"
-            width="877"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+        <source type="image/webp" srcset="assets/images/provozovna-kuchyn-480w.webp 480w, assets/images/provozovna-kuchyn-800w.webp 800w, assets/images/provozovna-kuchyn.webp 900w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/provozovna-kuchyn.jpg"
+          alt="Kuchyně provozovny"
+          width="900"
+          height="1200"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+          <picture>
+        <source type="image/webp" srcset="assets/images/provozovna-vstup-480w.webp 480w, assets/images/provozovna-vstup-800w.webp 800w, assets/images/provozovna-vstup.webp 877w" sizes="(max-width: 960px) 46vw, 270px" />
+        <img
+          src="assets/images/provozovna-vstup.jpg"
+          alt="Vstup do provozovny"
+          width="877"
+          height="1200"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
         </div>
       </div>
     </section>
