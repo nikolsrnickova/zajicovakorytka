@@ -739,8 +739,8 @@ p {
 
 /* ——— Fotogalerie ——— */
 .gallery {
-  --gallery-per-view: 3;
-  --gallery-gap: 0.85rem;
+  --gallery-per-view: 4;
+  --gallery-gap: 0.75rem;
   max-width: 100%;
   min-width: 0;
   overflow: hidden;
