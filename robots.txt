@@ -1,7 +1,4 @@
-# Preview / staging — block crawlers.
-# Before public launch, replace with:
-# User-agent: *
-# Allow: /
-
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://www.zajicovakorytka.cz/sitemap.xml

@@ -9,9 +9,10 @@ Moderní responzivní web pro značku Zajícova korýtka - poctivá korýtka, ca
 - `script.js` — navigace, scroll a reveal animace
 - `aktualita.json` — aktuální zpráva o obsazenosti (upravitelná bez zásahu do HTML)
 - `assets/images/` — fotografie
-- `robots.txt` — zatím blokuje indexaci (preview)
+- `robots.txt` — povoluje indexaci
+- `sitemap.xml` — mapa webu pro vyhledávače
 
-**Před ostrým spuštěním na produkční doméně:** smaž meta `robots` noindex v `index.html`, uprav `robots.txt` na `Allow: /`
+Web je připravený pro provoz na `https://www.zajicovakorytka.cz` (GitHub Pages + vlastní doména).
 
 ## Jak změnit aktualitu / obsazenost
 
